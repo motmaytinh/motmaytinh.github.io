@@ -505,3 +505,18 @@ th, td {
 .fa-rss-square:hover {
 	color: #ff6600;
 }
+
+
+/*
+  Responsive about
+*/
+
+.about-short {
+  width: 50%;
+  float: left;
+}
+
+.about-img {
+  width: 50%;
+  float: left;
+}
