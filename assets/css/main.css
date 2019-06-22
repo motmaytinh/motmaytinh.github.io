@@ -520,3 +520,9 @@ th, td {
   width: 50%;
   float: left;
 }
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
