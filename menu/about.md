@@ -10,7 +10,7 @@ Software Engineer
 Computer Science & Engineering
 Ho Chi Minh City University of Technology
 
-quytn.cs@gmail.com
+[quytn.cs@gmail.com](mailto:quytn.cs@gmail.com)
 
 Hi, I am a fourth-year B.E student in Computer Science at Ho Chi Minh University of Technology. I am particularly enthusiastic in exploring NLP and ML techniques to solve realworld problems relating to language technologies.
 
