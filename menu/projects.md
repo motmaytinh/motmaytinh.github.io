@@ -9,7 +9,7 @@ title: Pet projects
             <h1>
                 <a href="{{ site.github.url }}{{ project.url }}">{{ project.title }}</a>
             </h1>
-            {% if post.image %}
+            {% if project.image %}
                 <div class="thumbnail-container">
                     <a href="{{ site.github.url }}{{ project.url }}"><img src="{{ site.github.url }}/assets/img/projects/{{ project.image }}"></a>
                 </div>
