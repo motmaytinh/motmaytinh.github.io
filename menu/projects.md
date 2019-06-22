@@ -3,22 +3,21 @@ layout: page
 title: Pet projects
 ---
 <ul class="posts">
-  {% for post in site.posts %}
+    {% for project in site.projects %}
 
-    {% unless post.next %}
-      <h3>{{ post.date | date: '%Y' }}</h3>
-    {% else %}
-      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-      {% if year != nyear %}
-        <h3>{{ post.date | date: '%Y' }}</h3>
-      {% endif %}
-    {% endunless %}
+        <div class="posts">
+            <h1>
+                <a href="{{ site.github.url }}{{ project.url }}">{{ project.title }}</a>
+            </h1>
+            {% if post.image %}
+                <div class="thumbnail-container">
+                    <a href="{{ site.github.url }}{{ project.url }}"><img src="{{ site.github.url }}/assets/img/projects/{{ project.image }}"></a>
+                </div>
+            {% endif %}
+            <p>
+                {{ project.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ project.url }}">Read more</a>
+            </p>
+        </div>
 
-    <li itemscope>
-      <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
-      <p class="post-date"><span><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date: "%B %-d" }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span></p>
-    </li>
-
-  {% endfor %}
+    {% endfor %}
 </ul>
