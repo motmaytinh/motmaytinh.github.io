@@ -1,6 +1,6 @@
 # Change 'comments' to true for Disqus comments
 disqus:
-  comments: false
+  comments: true
   disqus_shortname: 'motmaytinh'
 
 # If you are not using Google Analytics, please change 'google-ID' to an empty string

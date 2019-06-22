@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Welcome to Lagrange!
+title: TRAN Ngoc Quy
 ---
 
-Lagrange is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. Below you can find everything you need to get started.
+<img style="float: right;" src="../assets/img/me.png" width="300">
 
-### Getting Started
+Software Engineer
+Zalo
 
-[Getting Started]({{ site.github.url }}{% post_url 2015-10-10-getting-started %}): getting started with installing Lagrange, whether you are completely new to using Jekyll, or simply just migrating to a new Jekyll theme.
+Computer Science & Engineering
+Ho Chi Minh City University of Technology
 
-### Example Content
+quytn.cs@gmail.com
 
-[Text and Formatting]({{ site.github.url }}{% post_url 2014-01-01-text-formatting-examples %})
+Hi, I am a fourth-year B.E student in Computer Science at Ho Chi Minh University of Technology. I am particularly enthusiastic in exploring NLP and ML techniques to solve realworld problems relating to language technologies.
 
-### Questions?
-
-This theme is completely free and open source software. You may use it however you want, as it is distributed under the [MIT License](http://choosealicense.com/licenses/mit/). If you are having any problems, any questions or suggestions, feel free to [tweet at me](https://twitter.com/intent/tweet?text=My%question%about%Lagrange%is:%&amp;via=paululele), or [file a GitHub issue](https://github.com/lenpaul/lagrange/issues/new).
+I am a software engineer at Zalo.
