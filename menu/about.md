@@ -29,10 +29,13 @@ title: TRAN Ngoc Quy
 
 ---
 
+<div>
+
 Hi, I am a fourth-year B.E student in Computer Science at Ho Chi Minh University of Technology. I am particularly enthusiastic in exploring NLP and ML techniques to solve realworld problems relating to language technologies.
 
 I am a software engineer at Zalo.
 
+</div>
 ---
 
 ## Personal
