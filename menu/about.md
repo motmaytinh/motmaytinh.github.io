@@ -6,7 +6,6 @@ title: TRAN Ngoc Quy
 <img style="float: right;" src="../assets/img/me.png" width="300">
 
 Software Engineer
-Zalo
 
 Computer Science & Engineering
 Ho Chi Minh City University of Technology
