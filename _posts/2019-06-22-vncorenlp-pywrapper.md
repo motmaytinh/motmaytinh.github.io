@@ -77,10 +77,27 @@ VnCoreNLP require an array of string containing anotators. What to note here is 
 annotators = gateway.new_array(gateway.jvm.java.lang.String, 1)
 ```
 
-The `new_array` function receive first argument as the type of the array, for the `String` type, you can obtain it from `java.lang` library. The lenght of the array is specified in the following arguments. Here I create a 1 element array.
+The `new_array` function receive first argument as the type of the array, for the `String` type, you can obtain it from `java.lang` library. The length of the array is specified in the following arguments. Here I create a 1 element array.
 
 Assigning element to array is easy as it heard.
 
 ```python
 annotators[0] = 'wseg'
 ```
+
+Calling a Java class need fully qualified name like below.
+
+```python
+pipeline = gateway.jvm.vn.pipeline.VnCoreNLP(annotators)
+annotation = gateway.jvm.vn.pipeline.Annotation(sentence)
+```
+
+After getting the Java class, calling a function is just like simple python function call.
+
+```python
+pipeline.annotate(annotation)
+```
+
+And that's all you need to note on how to write the wrapper.
+
+The full project can be found [herer](https://github.com/motmaytinh/vncorenlp-pywrapper)
