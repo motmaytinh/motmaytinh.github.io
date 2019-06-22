@@ -4,7 +4,7 @@ title: "How I wrote a python wrapper for Java"
 author: "Tran Ngoc Quy"
 categories: journal
 tags: [ml,nlp,python,java,programming]
-# image: cutting.jpg
+image: posts/cutting.jpg
 ---
 
 When working on my thesis, I have to experiment on different tokenize tool. One of those is [VnCoreNLP](https://github.com/vncorenlp/VnCoreNLP) which is reported to have very high accuracy. The thing is it's written in Java while my pipeline is written in Python. So, I decided to write a python wrapper for it. Let's go.
@@ -100,4 +100,4 @@ pipeline.annotate(annotation)
 
 And that's all you need to note on how to write the wrapper.
 
-The full project can be found [herer](https://github.com/motmaytinh/vncorenlp-pywrapper)
+The full project can be found [here](https://github.com/motmaytinh/vncorenlp-pywrapper)
