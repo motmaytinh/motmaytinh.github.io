@@ -10,6 +10,7 @@ menu:
 - {name: 'About', path: 'menu', url: 'about.html'}
 - {name: 'Writing', path: 'menu', url: 'writing.html'}
 - {name: 'Projects', path: 'menu', url: 'projects.html'}
+# - {name: 'Photography', path: 'menu', url: 'photography.html'}
 - {name: 'Musings', path: 'menu', url: 'musings.html'}
 - {name: 'Contact', path: 'menu', url: 'contact.html'}
 
