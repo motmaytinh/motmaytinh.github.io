@@ -554,6 +554,10 @@ img {
   border-radius: 5px 5px 0 0;
 }
 
+.img-rounded {
+  border-radius: 5px;
+}
+
 .card-container {
   padding: 2px 16px;
   margin: 30px;
