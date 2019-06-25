@@ -2,7 +2,7 @@
 layout: post
 title: "How I wrote a python wrapper for Java"
 author: "Tran Ngoc Quy"
-categories: journal
+categories: tech
 tags: [ml,nlp,python,java,programming]
 image: vncorenlp-pywrapper.png
 ---
