@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How I wrote a python wrapper for Java"
+title: "How I wrote a python wrapper for Java implementation of VnCoreNLP"
 author: "Tran Ngoc Quy"
 categories: tech
 tags: [ml,nlp,python,java,programming]
