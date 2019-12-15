@@ -41,3 +41,5 @@ I am a software engineer at Zalo.
 ## Personal
 
 I like making friends with people around the world; photography; reading books; listening to instrumental music.
+
+Take a look at my photos <a href="https://myalbum.com/embed/7KAjl6f3h9dS">here</a>
