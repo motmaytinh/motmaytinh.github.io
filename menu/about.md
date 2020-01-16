@@ -31,7 +31,7 @@ title: TRAN Ngoc Quy
 
 <div class="row">
 
-Hi, I am a fourth-year B.E student in Computer Science at Ho Chi Minh University of Technology. I am particularly enthusiastic in exploring NLP and ML techniques to solve realworld problems relating to language technologies.
+Hi, I am a software engineer. I am particularly enthusiastic in exploring NLP and ML techniques to solve realworld problems relating to language technologies.
 
 I am a software engineer at Zalo.
 
@@ -40,6 +40,6 @@ I am a software engineer at Zalo.
 
 ## Personal
 
-I like making friends with people around the world; photography; reading books; listening to instrumental music.
+I love making new friends with people around the world; photography; reading books; listening to instrumental music.
 
-Take a look at my photos <a href="https://myalbum.com/embed/7KAjl6f3h9dS">here.</a>
+Take a look at my photos <a href="www.flickr.com/gp/motmaytinh/nd78Nb">here.</a>
