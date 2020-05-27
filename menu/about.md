@@ -43,3 +43,6 @@ I am a software engineer at Zalo.
 I love making new friends with people around the world; photography; reading books; listening to instrumental music.
 
 Take a look at my photos <a href="www.flickr.com/gp/motmaytinh/nd78Nb">here.</a>
+
+## Other interests
+Raspberry pi, Hacking
