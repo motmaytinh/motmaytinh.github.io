@@ -22,7 +22,7 @@ if (bars == null) {
 bars.add(100);
 ```
 
-... can now be reduce to a one-liner like this
+... can now be reduced to a one-liner like this
 
 ```java
 foo.computeIfAbsent("bar", key -> new LinkedList<>()).add(100);
