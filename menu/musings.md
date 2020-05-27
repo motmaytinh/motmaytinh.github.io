@@ -6,7 +6,7 @@ title: Musing
 <div class="quote-container">
     <p class="post-date"><span><i class="fa fa-calendar" aria-hidden="true"></i> May 27, 2020 <i class="fa fa-clock-o" aria-hidden="true"></i></span></p>
     <p class="quote"><i>"Because it's the thought of Mecca that keeps me alive. That's what helps me face these days that are all the same, these mute crystals on the shelves, and lunch and dinner at that same horrible cafe. I'm afraid that if my dream is realized, I'll have no reason to go on living."</i></p>
-    <!-- <p class="author">Paulo Coelho, The Alchemist</p> -->
+    <p class="author">Paulo Coelho, The Alchemist</p>
 </div>
 
 <div class="quote-container">
