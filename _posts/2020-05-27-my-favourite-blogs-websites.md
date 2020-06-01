@@ -8,3 +8,4 @@ image: vncorenlp-pywrapper.png
 ---
 
 https://refactoring.guru/
+https://metebalci.com/

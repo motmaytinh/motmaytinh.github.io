@@ -45,4 +45,4 @@ I love making new friends with people around the world; photography; reading boo
 Take a look at my photos <a href="www.flickr.com/gp/motmaytinh/nd78Nb">here.</a>
 
 ## Other interests
-Raspberry pi, Hacking
+Raspberry pi, Hacking, Hackintosh
