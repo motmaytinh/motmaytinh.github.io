@@ -31,9 +31,7 @@ title: TRAN Ngoc Quy
 
 <div class="row">
 
-Hi, I am a software engineer. I am particularly enthusiastic in exploring NLP and ML techniques to solve realworld problems relating to language technologies.
-
-I am a software engineer at Zalo.
+Hi, I am a software engineer. I was always interested in how things work under the hood, and this blog is a relection on that.
 
 </div>
 ---
