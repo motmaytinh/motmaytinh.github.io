@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang='en' dir='auto'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='When working on my thesis, I have to experiment on different tokenize tool. One of those is VnCoreNLP which is reported to have very high accuracy. The thing is it&rsquo;s written in Java while my pipeline is written in Python. So, I decided to write a python wrapper for it. Let&rsquo;s go.
+FYI: If you don&rsquo;t know it yet, the problem of calling others programming language is interoperability. For example, Java can call native function written in C/C&#43;&#43; using JNI.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='How I wrote a python wrapper for Java implementation of VnCoreNLP • Tran Ngoc Quy'>
+<meta property='og:description' content='When working on my thesis, I have to experiment on different tokenize tool. One of those is VnCoreNLP which is reported to have very high accuracy. The thing is it&rsquo;s written in Java while my pipeline is written in Python. So, I decided to write a python wrapper for it. Let&rsquo;s go.
+FYI: If you don&rsquo;t know it yet, the problem of calling others programming language is interoperability. For example, Java can call native function written in C/C&#43;&#43; using JNI.'>
+<meta property='og:url' content='https://motmaytinh.github.io/posts/authors/'>
+<meta property='og:site_name' content='motmaytinh'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/31514c61870770cfd63d3bc5deb100bb?s=256'><meta property='article:author' content='https://facebook.com/motmaytinh'><meta property='article:section' content='posts'><meta property='article:tag' content='python'><meta property='article:tag' content='java'><meta property='article:published_time' content='2019-06-22T07:01:05Z'/><meta property='article:modified_time' content='2020-07-29T07:01:05Z'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@motmaytinh'>
+
+<meta name="generator" content="Hugo 0.74.3" />
+
+  <title>How I wrote a python wrapper for Java implementation of VnCoreNLP • Tran Ngoc Quy</title>
+  <link rel='canonical' href='https://motmaytinh.github.io/posts/authors/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-posts'>
+
+  <div class='site'><a class='screen-reader-text' href='#content'>Skip to Content</a><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/about/'>About</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>motmaytinh</a></li><li><a href='/posts/'>Posts</a></li><li><span>How I wrote a python wrapper for Java implementation of VnCoreNLP</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>motmaytinh</p><p class='desc site-desc'>An Ethusiast of Many Things</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>How I wrote a python wrapper for Java implementation of VnCoreNLP</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2019-06-22T07:01:05Z'>2019, Jun 22</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/motmaytinh'>Tran Ngoc Quy</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+3 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <p>When working on my thesis, I have to experiment on different tokenize tool. One of those is <a href="https://github.com/vncorenlp/VnCoreNLP">VnCoreNLP</a> which is reported to have very high accuracy. The thing is it&rsquo;s written in Java while my pipeline is written in Python. So, I decided to write a python wrapper for it. Let&rsquo;s go.</p>
+<p>FYI: If you don&rsquo;t know it yet, the problem of calling others programming language is interoperability. For example, Java can call native function written in C/C++ using JNI.</p>
+<h2 id="the-problem">The problem</h2>
+<p>As I stated before, it&rsquo;s the matter of how to call Java implementation from python. After some consideration, I choose py4j for it simple usage.</p>
+<h2 id="preparation">Preparation</h2>
+<p>Okay, as a rule of thumb, I always create a create a new virtual environment for any python project.</p>
+<p>Let say we are in a new folder named <code>tokenizer</code>. To create a virtual environment, standing in <code>tokenzier</code>, you should type in the terminal like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python3 -m venv .env
+</code></pre></div><p>Remember to activate it using</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">source .env/bin/activate
+</code></pre></div><p>As always, install a python package is a piece of cake.</p>
+<p><code>pip install py4j</code></p>
+<p>And yes, because I&rsquo;m writing a wrapper for VnCoreNLP, I can&rsquo;t miss it. Clone the <a href="https://github.com/vncorenlp/VnCoreNLP">VnCoreNLP</a> repo. Placed VnCoreNLP-1.1.jar and the models directory of VnCoreNLP in the same working folder.</p>
+<p>To write a python library you should create a folder name <code>__init__</code></p>
+<p>The working directory structure should look like this now.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tokenizer/
+├── .env                        <span style="color:#75715e"># Virtual environment folder</span>
+├── __init__                    <span style="color:#75715e"># Python library files</span>
+├── models                      <span style="color:#75715e"># VnCoreNLP models</span>
+└── VnCoreNLP-1.1.jar           <span style="color:#75715e"># VnCoreNLP java lib</span>
+</code></pre></div><h2 id="getting-started">Getting started</h2>
+<p>Create a new python file in the folder <code>__init__</code>, in my case I named it <code>vncorenlp.py</code></p>
+<p>In <code>vncorenlp.py</code> import <code>JavaGateway</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> py4j.java_gateway <span style="color:#f92672">import</span> JavaGateway
+</code></pre></div><p>It&rsquo;s the standard library that you must import if you want to call a Java instance.</p>
+<p>Now, let&rsquo;s construct a class for the wrapper. I won&rsquo;t get into details, there will be full source code at the end of this post.</p>
+<p>The most important of this wrapper is how to get the Java instance to run. Creating new instance of a Java class is easy using py4j, they didn&rsquo;t told about this, but I guess it&rsquo;s a thing to figure out.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">gateway <span style="color:#f92672">=</span> JavaGateway<span style="color:#f92672">.</span>launch_gateway(classpath<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>path, die_on_exit<span style="color:#f92672">=</span>True)
+</code></pre></div><p>You shold pass a path to the jar file that encapsulating the Java function to the <code>launch_gateway</code> method. In this case, I&rsquo;m passing the path through the class constructor so you see I get the path through <code>self</code> instance.</p>
+<p>VnCoreNLP require an array of string containing anotators. What to note here is how to create a string list using py4j.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">annotators <span style="color:#f92672">=</span> gateway<span style="color:#f92672">.</span>new_array(gateway<span style="color:#f92672">.</span>jvm<span style="color:#f92672">.</span>java<span style="color:#f92672">.</span>lang<span style="color:#f92672">.</span>String, <span style="color:#ae81ff">1</span>)
+</code></pre></div><p>The <code>new_array</code> function receive first argument as the type of the array, for the <code>String</code> type, you can obtain it from <code>java.lang</code> library. The length of the array is specified in the following arguments. Here I create a 1 element array.</p>
+<p>Assigning element to array is easy as it heard.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">annotators[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;wseg&#39;</span>
+</code></pre></div><p>Calling a Java class need fully qualified name like below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pipeline <span style="color:#f92672">=</span> gateway<span style="color:#f92672">.</span>jvm<span style="color:#f92672">.</span>vn<span style="color:#f92672">.</span>pipeline<span style="color:#f92672">.</span>VnCoreNLP(annotators)
+annotation <span style="color:#f92672">=</span> gateway<span style="color:#f92672">.</span>jvm<span style="color:#f92672">.</span>vn<span style="color:#f92672">.</span>pipeline<span style="color:#f92672">.</span>Annotation(sentence)
+</code></pre></div><p>After getting the Java class, calling a function is just like simple python function call.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pipeline<span style="color:#f92672">.</span>annotate(annotation)
+</code></pre></div><p>And that&rsquo;s all you need to note on how to write the wrapper.</p>
+<p>The full project can be found <a href="https://github.com/motmaytinh/vncorenlp-pywrapper">here</a></p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='last-updated'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34" />
+  <polygon points="18 2 22 6 12 16 8 16 8 12 18 2" />
+  
+</svg>
+<span class='screen-reader-text'>Last updated: </span>
+      <time class='entry-date' datetime='2020-07-29T07:01:05Z'>2020, Jul 29</time>
+    </div><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/programming/'>programming</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/python/'>python</a>, <a class='tag' href='/tags/java/'>java</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/motmaytinh' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/motmaytinh' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://twitter.com/motmaytinh' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Twitter account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/motmaytinh' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:motmaytinh@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/quytn' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2020 Tran Ngoc Quy </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.c3bcf2df.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+
