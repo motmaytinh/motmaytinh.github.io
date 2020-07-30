@@ -3,11 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://motmaytinh.github.io/about/</loc>
+    <loc>https://motmaytinh.github.io/</loc>
+    <lastmod>2020-07-29T07:01:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://motmaytinh.github.io/posts/</loc>
+    <lastmod>2020-07-29T07:01:05+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://motmaytinh.github.io/musing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://motmaytinh.github.io/about/</loc>
   </url>
   
   <url>
@@ -21,7 +31,7 @@
   </url>
   
   <url>
-    <loc>https://motmaytinh.github.io/posts/python-wrapper-vn-core-nlp/</loc>
+    <loc>https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</loc>
     <lastmod>2020-07-29T07:01:05+00:00</lastmod>
   </url>
   
@@ -32,16 +42,6 @@
   
   <url>
     <loc>https://motmaytinh.github.io/authors/motmaytinh/</loc>
-    <lastmod>2020-07-29T07:01:05+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://motmaytinh.github.io/</loc>
-    <lastmod>2020-07-29T07:01:05+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://motmaytinh.github.io/posts/</loc>
     <lastmod>2020-07-29T07:01:05+00:00</lastmod>
   </url>
   
