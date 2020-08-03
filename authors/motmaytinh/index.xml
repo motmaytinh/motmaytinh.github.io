@@ -6,15 +6,24 @@
     <description>Recent content on motmaytinh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Jun 2019 07:01:05 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2020 10:08:00 +0700</lastBuildDate>
     
 	<atom:link href="https://motmaytinh.github.io/authors/motmaytinh/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>RSS 101</title>
+      <link>https://motmaytinh.github.io/2020/08/rss-101/</link>
+      <pubDate>Mon, 03 Aug 2020 10:08:00 +0700</pubDate>
+      
+      <guid>https://motmaytinh.github.io/2020/08/rss-101/</guid>
+      <description>Hi there</description>
+    </item>
+    
+    <item>
       <title>How I wrote a python wrapper for Java implementation of VnCoreNLP</title>
       <link>https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</link>
-      <pubDate>Sat, 22 Jun 2019 07:01:05 +0000</pubDate>
+      <pubDate>Sat, 22 Jun 2019 07:01:00 +0700</pubDate>
       
       <guid>https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</guid>
       <description>When working on my thesis, I have to experiment on different tokenize tool. One of those is VnCoreNLP which is reported to have very high accuracy. The thing is it&amp;rsquo;s written in Java while my pipeline is written in Python. So, I decided to write a python wrapper for it. Let&amp;rsquo;s go.
