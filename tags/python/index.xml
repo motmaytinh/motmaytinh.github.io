@@ -6,19 +6,10 @@
     <description>Recent content in python on motmaytinh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Aug 2020 10:08:00 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 22 Jun 2019 07:01:00 +0700</lastBuildDate>
     
 	<atom:link href="https://motmaytinh.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>RSS 101</title>
-      <link>https://motmaytinh.github.io/2020/08/rss-101/</link>
-      <pubDate>Mon, 03 Aug 2020 10:08:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/2020/08/rss-101/</guid>
-      <description>Hi there</description>
-    </item>
     
     <item>
       <title>How I wrote a python wrapper for Java implementation of VnCoreNLP</title>

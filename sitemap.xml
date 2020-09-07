@@ -26,12 +26,12 @@
   </url>
   
   <url>
-    <loc>https://motmaytinh.github.io/categories/</loc>
+    <loc>https://motmaytinh.github.io/categories/blogging/</loc>
     <lastmod>2020-08-03T10:08:00+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://motmaytinh.github.io/tags/java/</loc>
+    <loc>https://motmaytinh.github.io/categories/</loc>
     <lastmod>2020-08-03T10:08:00+07:00</lastmod>
   </url>
   
@@ -41,27 +41,32 @@
   </url>
   
   <url>
-    <loc>https://motmaytinh.github.io/categories/programming/</loc>
-    <lastmod>2020-08-03T10:08:00+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://motmaytinh.github.io/tags/python/</loc>
-    <lastmod>2020-08-03T10:08:00+07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://motmaytinh.github.io/2020/08/rss-101/</loc>
     <lastmod>2020-08-03T10:08:00+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://motmaytinh.github.io/tags/</loc>
-    <lastmod>2020-08-03T10:08:00+07:00</lastmod>
+    <loc>https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</loc>
+    <lastmod>2020-07-29T07:01:00+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</loc>
+    <loc>https://motmaytinh.github.io/tags/java/</loc>
+    <lastmod>2020-07-29T07:01:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://motmaytinh.github.io/categories/programming/</loc>
+    <lastmod>2020-07-29T07:01:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://motmaytinh.github.io/tags/python/</loc>
+    <lastmod>2020-07-29T07:01:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://motmaytinh.github.io/tags/</loc>
     <lastmod>2020-07-29T07:01:00+07:00</lastmod>
   </url>
   
