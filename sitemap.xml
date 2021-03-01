@@ -26,33 +26,18 @@
   </url>
   
   <url>
-    <loc>https://motmaytinh.github.io/categories/blogging/</loc>
-    <lastmod>2020-08-03T10:08:00+07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://motmaytinh.github.io/categories/</loc>
     <lastmod>2020-08-03T10:08:00+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://motmaytinh.github.io/authors/motmaytinh/</loc>
-    <lastmod>2020-08-03T10:08:00+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://motmaytinh.github.io/2020/08/rss-101/</loc>
-    <lastmod>2020-08-03T10:08:00+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</loc>
-    <lastmod>2020-07-29T07:01:00+07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://motmaytinh.github.io/tags/java/</loc>
     <lastmod>2020-07-29T07:01:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://motmaytinh.github.io/authors/motmaytinh/</loc>
+    <lastmod>2020-08-03T10:08:00+07:00</lastmod>
   </url>
   
   <url>
@@ -66,7 +51,27 @@
   </url>
   
   <url>
+    <loc>https://motmaytinh.github.io/2021/03/rendezvous-hashing-m%E1%BB%99t-thu%E1%BA%ADt-to%C3%A1n-kh%C3%A1c-thay-th%E1%BA%BF-consistent-hashing/</loc>
+    <lastmod>2020-03-01T10:08:00+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://motmaytinh.github.io/tags/</loc>
+    <lastmod>2020-07-29T07:01:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://motmaytinh.github.io/categories/blogging/</loc>
+    <lastmod>2020-08-03T10:08:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://motmaytinh.github.io/2020/08/rss-101/</loc>
+    <lastmod>2020-08-03T10:08:00+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</loc>
     <lastmod>2020-07-29T07:01:00+07:00</lastmod>
   </url>
   
