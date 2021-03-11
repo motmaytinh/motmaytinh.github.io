@@ -159,7 +159,9 @@ func (r *router) Get(key string) *Endpoint {
 <p>Nếu bạn thắc mắc làm sao mà thuật toán này có thể phân bố tải cân bằng được thì hãy nhớ lại tính chất của hàm hash (các khoá được phân bố đều trong bảng). Độ cân bằng của kết quả sẽ do phân phối của hàm hash quyết định. Các tác giả đã đề xuất hàm hash trong <a href="https://www.eecs.umich.edu/techreports/cse/96/CSE-TR-316-96.pdf">bài báo gốc</a> nhưng bạn có thể sử dụng bất kì hàm nào yêu thích. Đương nhiên sẽ ưu tiên những hàm cho phân phối đều cũng như thực thi càng nhanh càng tốt, ví dụ như <code>murmurhash3</code>.</p>
 <h2 id="weighted-rendezvous-hashing">Weighted Rendezvous Hashing</h2>
 <p>Vậy còn trọng số thì sao? Một cách dễ thấy nhất để áp dụng cho các server có trọng số khác nhau là cho nó xuất hiện nhiều lần trong danh sách tương ứng với trọng số, tuy nhiên cách này có điểm không hay là tăng thời gian tính toán và không thể đáp ứng nếu trọng số là số “lẻ” ví dụ 69%.</p>
-<p>May mắn là có một “phép thuật” giúp chúng ta kết hợp được trọng số vào kết quả hash: <code>score = -weight / log(h)</code>. Tadaa!</p>
+<p>May mắn là có một “phép thuật” giúp chúng ta kết hợp được trọng số vào kết quả hash:</p>
+<p>$$ score = {-weight \over log(h)} $$</p>
+<p>Tadaa!</p>
 <div class='align-center'>
   <img src="https://media.tenor.com/images/1fb93e098589d31f5023b7d32418f013/tenor.gif" alt="Magic">
 </div>
@@ -277,7 +279,11 @@ func (r *router) Get(key string) *Endpoint {
     </div>
   </div><script>window.__assets_js_src="/assets/js/"</script>
 
-<script src='/assets/js/main.c3bcf2df.js'></script><script src='/js/custom.js'></script>
+<script src='/assets/js/main.c3bcf2df.js'></script><script src='/js/custom.js'></script><script type='text/x-mathjax-config'>
+  MathJax.Hub.Config({})
+</script>
+
+<script type='text/javascript' async src='//unpkg.com/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'></script>
 
 </body>
 
