@@ -27,8 +27,8 @@ Phân chia dữ liệu cache trên cụm server với Consistent Hashing</descri
       <pubDate>Sat, 22 Jun 2019 07:01:00 +0700</pubDate>
       
       <guid>https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</guid>
-      <description>When working on my thesis, I have to experiment on different tokenize tool. One of those is VnCoreNLP which is reported to have very high accuracy. The thing is it&amp;rsquo;s written in Java while my pipeline is written in Python. So, I decided to write a python wrapper for it. Let&amp;rsquo;s go.
-FYI: If you don&amp;rsquo;t know it yet, the problem of calling others programming language is interoperability. For example, Java can call native function written in C/C++ using JNI.</description>
+      <description>When working on my thesis, I have to experiment with different tokenize tool. One of those is VnCoreNLP which is reported to have very high accuracy. The thing is it&amp;rsquo;s written in Java while my pipeline is written in Python. So, I decided to write a python wrapper for it. Let&amp;rsquo;s go.
+FYI: If you don&amp;rsquo;t know it yet, the problem of calling other programming language is interoperability. For example, Java can call native functions written in C/C++ using JNI.</description>
     </item>
     
   </channel>
