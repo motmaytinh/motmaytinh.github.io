@@ -135,7 +135,7 @@ if (!doNotTrack) {
 <p><a href="https://online.grokking.org/articles/28/phan-chia-du-lieu-cache-tren-cum-server-voi-consistent-hashing">Phân chia dữ liệu cache trên cụm server với Consistent Hashing</a></p>
 <h2 id="vậy-rendezvous-hashing-là-gì">Vậy Rendezvous Hashing là gì?</h2>
 <p>Sau khi đã “thông” qua vấn đề, mình xin giới thiệu thuật toán này.
-Ý tưởng rất đơn giản, bạn hash key cùng với tên của server (hoặc ip hay bất cứ gì đặc trưng của server) và chọn server cho kết quả lớn nhất. That&rsquo;s it!</p>
+Ý tưởng rất đơn giản, bạn hash key cùng với tên của server (hoặc ip hay bất cứ gì đặc trưng của server) được kết quả gọi là <code>score</code> rồi chọn server cho <code>score</code> lớn nhất. That&rsquo;s it!</p>
 <p>Thuật toán này đơn giản như cách nói vậy, đây là mã giả thể hiện “tinh thần” của thuật toán.</p>
 <pre><code>type router struct {
   endpoints []*Endpoint
@@ -159,7 +159,7 @@ func (r *router) Get(key string) *Endpoint {
 <p>Nếu bạn thắc mắc làm sao mà thuật toán này có thể phân bố tải cân bằng được thì hãy nhớ lại tính chất của hàm hash (các khoá được phân bố đều trong bảng). Độ cân bằng của kết quả sẽ do phân phối của hàm hash quyết định. Các tác giả đã đề xuất hàm hash trong <a href="https://www.eecs.umich.edu/techreports/cse/96/CSE-TR-316-96.pdf">bài báo gốc</a> nhưng bạn có thể sử dụng bất kì hàm nào yêu thích. Đương nhiên sẽ ưu tiên những hàm cho phân phối đều cũng như thực thi càng nhanh càng tốt, ví dụ như <code>murmurhash3</code>.</p>
 <h2 id="weighted-rendezvous-hashing">Weighted Rendezvous Hashing</h2>
 <p>Vậy còn trọng số thì sao? Một cách dễ thấy nhất để áp dụng cho các server có trọng số khác nhau là cho nó xuất hiện nhiều lần trong danh sách tương ứng với trọng số, tuy nhiên cách này có điểm không hay là tăng thời gian tính toán và không thể đáp ứng nếu trọng số là số “lẻ” ví dụ 69%.</p>
-<p>May mắn là có một “phép thuật” giúp chúng ta kết hợp được trọng số vào kết quả hash:</p>
+<p>May mắn là có một “phép thuật” giúp chúng ta kết hợp được trọng số vào kết quả <code>score</code>:</p>
 <p>$$ score = {-weight \over log(h)} $$</p>
 <p>Tadaa!</p>
 <div class='align-center'>
@@ -270,7 +270,7 @@ func (r *router) Get(key string) *Endpoint {
       </li></ul>
   </nav>
 </section><div class='copyright'>
-  <p> &copy; 2020-2021 Tran Ngoc Quy </p>
+  <p> &copy; 2019-2021 Tran Ngoc Quy </p>
 </div>
 
         </div>
