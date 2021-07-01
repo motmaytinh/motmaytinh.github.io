@@ -2,13 +2,11 @@
 <html lang='en' dir='auto'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Khoan, Consistent Hashing là gì? Bài viết này nhằm mục đích giới thiệu Rendezvous Hashing (Highest Random Weight Hashing), một thuật toán có thể thay thế cho thuật toán “trứ danh” Consistent Hashing. Nếu bạn chưa từng nghe về Consistent Hashing và bài toán mà nó giải quyết thì có thể tham khảo qua bài viết dễ đọc và dễ hiểu này trước khi đi vào nội dung.
-Phân chia dữ liệu cache trên cụm server với Consistent Hashing'>
+<meta name='description' content='Khoan, Consistent Hashing là gì? À, bài viết này nhằm mục đích giới thiệu Rendezvous Hashing (Highest Random Weight Hashing), một thuật toán có thể thay thế cho thuật toán “trứ danh” Consistent Hashing. Nếu bạn chưa từng nghe về Consistent Hashing và bài toán mà nó giải quyết thì có thể tham khảo qua bài viết dễ đọc và dễ hiểu này trước khi đi vào nội dung chính.'>
 <meta name='theme-color' content='#ffcd00'>
 
 <meta property='og:title' content='Rendezvous Hashing, một thuật toán khác thay thế Consistent Hashing • Tran Ngoc Quy'>
-<meta property='og:description' content='Khoan, Consistent Hashing là gì? Bài viết này nhằm mục đích giới thiệu Rendezvous Hashing (Highest Random Weight Hashing), một thuật toán có thể thay thế cho thuật toán “trứ danh” Consistent Hashing. Nếu bạn chưa từng nghe về Consistent Hashing và bài toán mà nó giải quyết thì có thể tham khảo qua bài viết dễ đọc và dễ hiểu này trước khi đi vào nội dung.
-Phân chia dữ liệu cache trên cụm server với Consistent Hashing'>
+<meta property='og:description' content='Khoan, Consistent Hashing là gì? À, bài viết này nhằm mục đích giới thiệu Rendezvous Hashing (Highest Random Weight Hashing), một thuật toán có thể thay thế cho thuật toán “trứ danh” Consistent Hashing. Nếu bạn chưa từng nghe về Consistent Hashing và bài toán mà nó giải quyết thì có thể tham khảo qua bài viết dễ đọc và dễ hiểu này trước khi đi vào nội dung chính.'>
 <meta property='og:url' content='https://motmaytinh.github.io/2021/03/rendezvous-hashing-m%E1%BB%99t-thu%E1%BA%ADt-to%C3%A1n-kh%C3%A1c-thay-th%E1%BA%BF-consistent-hashing/'>
 <meta property='og:site_name' content='motmaytinh'>
 <meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/31514c61870770cfd63d3bc5deb100bb?s=256'><meta property='article:author' content='https://facebook.com/motmaytinh'><meta property='article:section' content='posts'><meta property='article:tag' content='java'><meta property='article:published_time' content='2021-03-01T10:08:00&#43;07:00'/><meta property='article:modified_time' content='2020-03-01T10:08:00&#43;07:00'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@motmaytinh'>
@@ -131,11 +129,11 @@ if (!doNotTrack) {
 
   <div class='container entry-content'>
   <h2 id="khoan-consistent-hashing-là-gì">Khoan, Consistent Hashing là gì?</h2>
-<p>Bài viết này nhằm mục đích giới thiệu Rendezvous Hashing (Highest Random Weight Hashing), một thuật toán có thể thay thế cho thuật toán “trứ danh” Consistent Hashing. Nếu bạn chưa từng nghe về Consistent Hashing và bài toán mà nó giải quyết thì có thể tham khảo qua bài viết dễ đọc và dễ hiểu này trước khi đi vào nội dung.</p>
+<p>À, bài viết này nhằm mục đích giới thiệu Rendezvous Hashing (Highest Random Weight Hashing), một thuật toán có thể thay thế cho thuật toán “trứ danh” Consistent Hashing. Nếu bạn chưa từng nghe về Consistent Hashing và bài toán mà nó giải quyết thì có thể tham khảo qua bài viết dễ đọc và dễ hiểu này trước khi đi vào nội dung chính.</p>
 <p><a href="https://online.grokking.org/articles/28/phan-chia-du-lieu-cache-tren-cum-server-voi-consistent-hashing">Phân chia dữ liệu cache trên cụm server với Consistent Hashing</a></p>
 <h2 id="vậy-rendezvous-hashing-là-gì">Vậy Rendezvous Hashing là gì?</h2>
 <p>Sau khi đã “thông” qua vấn đề, mình xin giới thiệu thuật toán này.
-Ý tưởng rất đơn giản, bạn hash key cùng với tên của server (hoặc ip hay bất cứ gì đặc trưng của server) được kết quả gọi là <code>score</code> rồi chọn server cho <code>score</code> lớn nhất. That&rsquo;s it!</p>
+Ý tưởng rất đơn giản, bạn hash key cùng với tên của server (hoặc IP hay bất cứ gì đặc trưng của server) được kết quả gọi là <code>score</code> rồi chọn server cho <code>score</code> lớn nhất. That&rsquo;s it!</p>
 <p>Thuật toán này đơn giản như cách nói vậy, đây là mã giả thể hiện “tinh thần” của thuật toán.</p>
 <pre><code>type router struct {
   endpoints []*Endpoint
