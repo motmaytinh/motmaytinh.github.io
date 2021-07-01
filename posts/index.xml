@@ -6,11 +6,7 @@
     <description>Recent content in Writing on motmaytinh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Mar 2021 10:08:00 +0700</lastBuildDate>
-    
-	<atom:link href="https://motmaytinh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 01 Mar 2021 10:08:00 +0700</lastBuildDate><atom:link href="https://motmaytinh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rendezvous Hashing, một thuật toán khác thay thế Consistent Hashing</title>
       <link>https://motmaytinh.github.io/2021/03/rendezvous-hashing-m%E1%BB%99t-thu%E1%BA%ADt-to%C3%A1n-kh%C3%A1c-thay-th%E1%BA%BF-consistent-hashing/</link>

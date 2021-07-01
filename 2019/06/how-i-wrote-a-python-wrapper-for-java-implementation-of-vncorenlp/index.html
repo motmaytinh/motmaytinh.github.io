@@ -13,7 +13,7 @@ FYI: If you don&rsquo;t know it yet, the problem of calling other programming la
 <meta property='og:site_name' content='motmaytinh'>
 <meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/31514c61870770cfd63d3bc5deb100bb?s=256'><meta property='article:author' content='https://facebook.com/motmaytinh'><meta property='article:section' content='posts'><meta property='article:tag' content='python'><meta property='article:tag' content='java'><meta property='article:published_time' content='2019-06-22T07:01:00&#43;07:00'/><meta property='article:modified_time' content='2020-07-29T07:01:00&#43;07:00'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@motmaytinh'>
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.84.3" />
 
   <title>How I wrote a python wrapper for Java implementation of VnCoreNLP • Tran Ngoc Quy</title>
   <link rel='canonical' href='https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/'>
@@ -156,7 +156,7 @@ if (!doNotTrack) {
 </code></pre></div><p>It&rsquo;s the standard library that you must import if you want to call a Java instance.</p>
 <p>Now, let&rsquo;s construct a class for the wrapper. I won&rsquo;t get into details, there will be full source code at the end of this post.</p>
 <p>The most important of this wrapper is how to get the Java instance to run. Creating a new instance of a Java class is easy using py4j, they didn&rsquo;t tell about this, but I guess it&rsquo;s a thing to figure out.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">gateway <span style="color:#f92672">=</span> JavaGateway<span style="color:#f92672">.</span>launch_gateway(classpath<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>path, die_on_exit<span style="color:#f92672">=</span>True)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">gateway <span style="color:#f92672">=</span> JavaGateway<span style="color:#f92672">.</span>launch_gateway(classpath<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>path, die_on_exit<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
 </code></pre></div><p>You should pass a path to the jar file that encapsulating the Java function to the <code>launch_gateway</code> method. In this case, I&rsquo;m passing the path through the class constructor so you see I get the path through the <code>self</code> instance.</p>
 <p>VnCoreNLP requires an array of strings containing annotators. What to note here is how to create a string list using <code>py4j</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">annotators <span style="color:#f92672">=</span> gateway<span style="color:#f92672">.</span>new_array(gateway<span style="color:#f92672">.</span>jvm<span style="color:#f92672">.</span>java<span style="color:#f92672">.</span>lang<span style="color:#f92672">.</span>String, <span style="color:#ae81ff">1</span>)

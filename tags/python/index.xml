@@ -6,11 +6,7 @@
     <description>Recent content in python on motmaytinh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Jun 2019 07:01:00 +0700</lastBuildDate>
-    
-	<atom:link href="https://motmaytinh.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 22 Jun 2019 07:01:00 +0700</lastBuildDate><atom:link href="https://motmaytinh.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How I wrote a python wrapper for Java implementation of VnCoreNLP</title>
       <link>https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</link>
