@@ -9,9 +9,9 @@
 <meta property='og:description' content='Khoan, Consistent Hashing là gì? À, bài viết này nhằm mục đích giới thiệu Rendezvous Hashing (Highest Random Weight Hashing), một thuật toán có thể thay thế cho thuật toán “trứ danh” Consistent Hashing. Nếu bạn chưa từng nghe về Consistent Hashing và bài toán mà nó giải quyết thì có thể tham khảo qua bài viết dễ đọc và dễ hiểu này trước khi đi vào nội dung chính.'>
 <meta property='og:url' content='https://motmaytinh.github.io/2021/03/rendezvous-hashing-m%E1%BB%99t-thu%E1%BA%ADt-to%C3%A1n-kh%C3%A1c-thay-th%E1%BA%BF-consistent-hashing/'>
 <meta property='og:site_name' content='motmaytinh'>
-<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/31514c61870770cfd63d3bc5deb100bb?s=256'><meta property='article:author' content='https://facebook.com/motmaytinh'><meta property='article:section' content='posts'><meta property='article:tag' content='java'><meta property='article:published_time' content='2021-03-01T10:08:00&#43;07:00'/><meta property='article:modified_time' content='2020-03-01T10:08:00&#43;07:00'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@motmaytinh'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/31514c61870770cfd63d3bc5deb100bb?s=256'><meta property='article:author' content='https://facebook.com/motmaytinh'><meta property='article:section' content='posts'><meta property='article:tag' content='java'><meta property='article:published_time' content='2021-03-01T10:08:00&#43;07:00'/><meta property='article:modified_time' content='2021-12-12T10:08:00&#43;07:00'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@motmaytinh'>
 
-<meta name="generator" content="Hugo 0.84.3" />
+<meta name="generator" content="Hugo 0.90.1" />
 
   <title>Rendezvous Hashing, một thuật toán khác thay thế Consistent Hashing • Tran Ngoc Quy</title>
   <link rel='canonical' href='https://motmaytinh.github.io/2021/03/rendezvous-hashing-m%E1%BB%99t-thu%E1%BA%ADt-to%C3%A1n-kh%C3%A1c-thay-th%E1%BA%BF-consistent-hashing/'>
@@ -43,8 +43,8 @@ if (!doNotTrack) {
     
     <ul><li class='item'>
         <a href='/'>Home</a>
-      </li><li class='item'>
-        <a href='/posts/'>Writing</a>
+      </li><li class='item current'>
+        <a aria-current='page' href='/posts/'>Writing</a>
       </li><li class='item'>
         <a href='/musing/'>Musing</a>
       </li><li class='item'>
@@ -135,7 +135,7 @@ if (!doNotTrack) {
 <p>Sau khi đã “thông” qua vấn đề, mình xin giới thiệu thuật toán này.
 Ý tưởng rất đơn giản, bạn hash key cùng với tên của server (hoặc IP hay bất cứ gì đặc trưng của server) được kết quả gọi là <code>score</code> rồi chọn server cho <code>score</code> lớn nhất. That&rsquo;s it!</p>
 <p>Thuật toán này đơn giản như cách nói vậy, đây là mã giả thể hiện “tinh thần” của thuật toán.</p>
-<pre><code>type router struct {
+<pre tabindex="0"><code>type router struct {
   endpoints []*Endpoint
 }
 func (r *router) Get(key string) *Endpoint {
@@ -188,7 +188,7 @@ func (r *router) Get(key string) *Endpoint {
   
 </svg>
 <span class='screen-reader-text'>Last updated: </span>
-      <time class='entry-date' datetime='2020-03-01T10:08:00&#43;07:00'>2020, Mar 01</time>
+      <time class='entry-date' datetime='2021-12-12T10:08:00&#43;07:00'>2021, Dec 12</time>
     </div><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
