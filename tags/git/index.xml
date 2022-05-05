@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blogging on motmaytinh</title>
-    <link>https://motmaytinh.github.io/categories/blogging/</link>
-    <description>Recent content in blogging on motmaytinh</description>
+    <title>git on motmaytinh</title>
+    <link>https://motmaytinh.github.io/tags/git/</link>
+    <description>Recent content in git on motmaytinh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 May 2022 10:16:00 +0700</lastBuildDate><atom:link href="https://motmaytinh.github.io/categories/blogging/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 May 2022 10:16:00 +0700</lastBuildDate><atom:link href="https://motmaytinh.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Awesome blog posts</title>
       <link>https://motmaytinh.github.io/2022/05/awesome-blog-posts/</link>
@@ -15,15 +15,6 @@
       <guid>https://motmaytinh.github.io/2022/05/awesome-blog-posts/</guid>
       <description>These are blog posts I read over the years. Some of them explain concepts in a way that’s easy to understand. Some discuss common pitfalls/misunderstandings which are helpful for a newbie. There are also some blogs that I like to read. They either have witty or neat content.
 Networking  How NAT traversal works  Programming  Explaining dynamic programming to a 4 year old  Kafka  A gentle introduction to Apache Kafka  Docker  10 Myths About Docker That Stop Developers Cold  Git  How to Write a Git Commit Message CHERRY-PICKING SPECIFIC COMMITS FROM ANOTHER BRANCH  Blogs  wizard zines : Explaining programming concepts in a comical way Lam Do : Tips and guides for preparing and conducting interview  (To be updated&amp;hellip;)</description>
-    </item>
-    
-    <item>
-      <title>RSS 101</title>
-      <link>https://motmaytinh.github.io/2020/08/rss-101/</link>
-      <pubDate>Mon, 03 Aug 2020 10:08:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/2020/08/rss-101/</guid>
-      <description>If you like to collect wisdom from blogs like me, you probably have experienced when: having too many blogs to follow and not knowing when a new post comes out. The primitive manual way to do is regularly loop through the bookmarked blogs to find if there are any updates. Of course, it&amp;rsquo;s not the way we developer comply with, most of you will think of writing a crawler, automating the process and notify when new content had been published.</description>
     </item>
     
   </channel>

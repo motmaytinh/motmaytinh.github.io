@@ -6,7 +6,17 @@
     <description>Recent content on motmaytinh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Mar 2021 10:08:00 +0700</lastBuildDate><atom:link href="https://motmaytinh.github.io/authors/motmaytinh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 May 2022 10:16:00 +0700</lastBuildDate><atom:link href="https://motmaytinh.github.io/authors/motmaytinh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Awesome blog posts</title>
+      <link>https://motmaytinh.github.io/2022/05/awesome-blog-posts/</link>
+      <pubDate>Thu, 05 May 2022 10:16:00 +0700</pubDate>
+      
+      <guid>https://motmaytinh.github.io/2022/05/awesome-blog-posts/</guid>
+      <description>These are blog posts I read over the years. Some of them explain concepts in a way that’s easy to understand. Some discuss common pitfalls/misunderstandings which are helpful for a newbie. There are also some blogs that I like to read. They either have witty or neat content.
+Networking  How NAT traversal works  Programming  Explaining dynamic programming to a 4 year old  Kafka  A gentle introduction to Apache Kafka  Docker  10 Myths About Docker That Stop Developers Cold  Git  How to Write a Git Commit Message CHERRY-PICKING SPECIFIC COMMITS FROM ANOTHER BRANCH  Blogs  wizard zines : Explaining programming concepts in a comical way Lam Do : Tips and guides for preparing and conducting interview  (To be updated&amp;hellip;)</description>
+    </item>
+    
     <item>
       <title>Rendezvous Hashing, một thuật toán khác thay thế Consistent Hashing</title>
       <link>https://motmaytinh.github.io/2021/03/rendezvous-hashing-m%E1%BB%99t-thu%E1%BA%ADt-to%C3%A1n-kh%C3%A1c-thay-th%E1%BA%BF-consistent-hashing/</link>
