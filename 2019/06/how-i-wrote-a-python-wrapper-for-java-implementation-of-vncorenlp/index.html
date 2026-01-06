@@ -9,31 +9,40 @@ FYI: If you don&rsquo;t know it yet, the problem of calling other programming la
 <meta property='og:title' content='How I wrote a python wrapper for Java implementation of VnCoreNLP • Tran Ngoc Quy'>
 <meta property='og:description' content='When working on my thesis, I have to experiment with different tokenize tool. One of those is VnCoreNLP which is reported to have very high accuracy. The thing is it&rsquo;s written in Java while my pipeline is written in Python. So, I decided to write a python wrapper for it. Let&rsquo;s go.
 FYI: If you don&rsquo;t know it yet, the problem of calling other programming language is interoperability. For example, Java can call native functions written in C/C&#43;&#43; using JNI.'>
-<meta property='og:url' content='https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/'>
+<meta property='og:url' content='https://quytran.is-a.dev/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/'>
 <meta property='og:site_name' content='motmaytinh'>
 <meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/31514c61870770cfd63d3bc5deb100bb?s=256'><meta property='article:author' content='https://facebook.com/motmaytinh'><meta property='article:section' content='posts'><meta property='article:tag' content='python'><meta property='article:tag' content='java'><meta property='article:published_time' content='2019-06-22T07:01:00&#43;07:00'/><meta property='article:modified_time' content='2020-07-29T07:01:00&#43;07:00'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@motmaytinh'>
 
-<meta name="generator" content="Hugo 0.90.1" />
+<meta name="generator" content="Hugo 0.128.0">
 
   <title>How I wrote a python wrapper for Java implementation of VnCoreNLP • Tran Ngoc Quy</title>
-  <link rel='canonical' href='https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/'>
+  <link rel='canonical' href='https://quytran.is-a.dev/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/'>
   
   
   <link rel='icon' href='/favicon.ico'>
-<link rel='stylesheet' href='/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/css/custom.css'><style>
+<link rel='stylesheet' href='/assets/css/main.e45c9137.css'><link rel='stylesheet' href='/css/custom.css'><style>
 :root{--color-accent:#ffcd00;}
 </style>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JRPT3BD7GN"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-JRPT3BD7GN', { 'anonymize_ip': false });
-}
-</script>
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRPT3BD7GN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-JRPT3BD7GN');
+        }
+      </script>
+    
+  
+
 
   
 
@@ -151,39 +160,39 @@ if (!doNotTrack) {
 <h2 id="preparation">Preparation</h2>
 <p>Okay, as a rule of thumb, I always create a new virtual environment for any python project.</p>
 <p>Let say we are in a new folder named <code>tokenizer</code>. To create a virtual environment, standing in <code>tokenizer</code>, you should type in the terminal like this.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python3 -m venv .env
-</code></pre></div><p>Remember to activate it using</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">source .env/bin/activate
-</code></pre></div><p>As always, install a python package is a piece of cake.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 -m venv .env
+</span></span></code></pre></div><p>Remember to activate it using</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source .env/bin/activate
+</span></span></code></pre></div><p>As always, install a python package is a piece of cake.</p>
 <p><code>pip install py4j</code></p>
 <p>And yes, because I&rsquo;m writing a wrapper for VnCoreNLP, I can&rsquo;t miss it. Clone the <a href="https://github.com/vncorenlp/VnCoreNLP">VnCoreNLP</a> repo. Placed <code>VnCoreNLP-1.1.jar</code> and the <code>models</code> directory of VnCoreNLP in the same working folder.</p>
 <p>To write a python library you should create a folder name <code>__init__</code></p>
 <p>The working directory structure should look like this now.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tokenizer/
-├── .env                        <span style="color:#75715e"># Virtual environment folder</span>
-├── __init__                    <span style="color:#75715e"># Python library files</span>
-├── models                      <span style="color:#75715e"># VnCoreNLP models</span>
-└── VnCoreNLP-1.1.jar           <span style="color:#75715e"># VnCoreNLP java lib</span>
-</code></pre></div><h2 id="lets-do-it">Let&rsquo;s do it</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>tokenizer/
+</span></span><span style="display:flex;"><span>├── .env                        <span style="color:#75715e"># Virtual environment folder</span>
+</span></span><span style="display:flex;"><span>├── __init__                    <span style="color:#75715e"># Python library files</span>
+</span></span><span style="display:flex;"><span>├── models                      <span style="color:#75715e"># VnCoreNLP models</span>
+</span></span><span style="display:flex;"><span>└── VnCoreNLP-1.1.jar           <span style="color:#75715e"># VnCoreNLP java lib</span>
+</span></span></code></pre></div><h2 id="lets-do-it">Let&rsquo;s do it</h2>
 <p>Create a new python file in the folder <code>__init__</code>, in my case I named it <code>vncorenlp.py</code></p>
 <p>In <code>vncorenlp.py</code> import <code>JavaGateway</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> py4j.java_gateway <span style="color:#f92672">import</span> JavaGateway
-</code></pre></div><p>It&rsquo;s the standard library that you must import if you want to call a Java instance.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> py4j.java_gateway <span style="color:#f92672">import</span> JavaGateway
+</span></span></code></pre></div><p>It&rsquo;s the standard library that you must import if you want to call a Java instance.</p>
 <p>Now, let&rsquo;s construct a class for the wrapper. I won&rsquo;t get into details, there will be full source code at the end of this post.</p>
 <p>The most important of this wrapper is how to get the Java instance to run. Creating a new instance of a Java class is easy using py4j, they didn&rsquo;t tell about this, but I guess it&rsquo;s a thing to figure out.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">gateway <span style="color:#f92672">=</span> JavaGateway<span style="color:#f92672">.</span>launch_gateway(classpath<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>path, die_on_exit<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
-</code></pre></div><p>You should pass a path to the jar file that encapsulating the Java function to the <code>launch_gateway</code> method. In this case, I&rsquo;m passing the path through the class constructor so you see I get the path through the <code>self</code> instance.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>gateway <span style="color:#f92672">=</span> JavaGateway<span style="color:#f92672">.</span>launch_gateway(classpath<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>path, die_on_exit<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><p>You should pass a path to the jar file that encapsulating the Java function to the <code>launch_gateway</code> method. In this case, I&rsquo;m passing the path through the class constructor so you see I get the path through the <code>self</code> instance.</p>
 <p>VnCoreNLP requires an array of strings containing annotators. What to note here is how to create a string list using <code>py4j</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">annotators <span style="color:#f92672">=</span> gateway<span style="color:#f92672">.</span>new_array(gateway<span style="color:#f92672">.</span>jvm<span style="color:#f92672">.</span>java<span style="color:#f92672">.</span>lang<span style="color:#f92672">.</span>String, <span style="color:#ae81ff">1</span>)
-</code></pre></div><p>The <code>new_array</code> function receives the first argument as the type of the array, for the <code>String</code> type, you can obtain it from <code>java.lang</code> library. The length of the array is specified in the following arguments. Here I create a 1 element array.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>annotators <span style="color:#f92672">=</span> gateway<span style="color:#f92672">.</span>new_array(gateway<span style="color:#f92672">.</span>jvm<span style="color:#f92672">.</span>java<span style="color:#f92672">.</span>lang<span style="color:#f92672">.</span>String, <span style="color:#ae81ff">1</span>)
+</span></span></code></pre></div><p>The <code>new_array</code> function receives the first argument as the type of the array, for the <code>String</code> type, you can obtain it from <code>java.lang</code> library. The length of the array is specified in the following arguments. Here I create a 1 element array.</p>
 <p>Assigning an element to an array is easy as it heard.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">annotators[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;wseg&#39;</span>
-</code></pre></div><p>Calling a Java class need a fully qualified name like below.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pipeline <span style="color:#f92672">=</span> gateway<span style="color:#f92672">.</span>jvm<span style="color:#f92672">.</span>vn<span style="color:#f92672">.</span>pipeline<span style="color:#f92672">.</span>VnCoreNLP(annotators)
-annotation <span style="color:#f92672">=</span> gateway<span style="color:#f92672">.</span>jvm<span style="color:#f92672">.</span>vn<span style="color:#f92672">.</span>pipeline<span style="color:#f92672">.</span>Annotation(sentence)
-</code></pre></div><p>After getting the Java class, calling a function is just like a simple python function call.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pipeline<span style="color:#f92672">.</span>annotate(annotation)
-</code></pre></div><p>And that&rsquo;s all you need to note on how to write the wrapper.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>annotators[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;wseg&#39;</span>
+</span></span></code></pre></div><p>Calling a Java class need a fully qualified name like below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pipeline <span style="color:#f92672">=</span> gateway<span style="color:#f92672">.</span>jvm<span style="color:#f92672">.</span>vn<span style="color:#f92672">.</span>pipeline<span style="color:#f92672">.</span>VnCoreNLP(annotators)
+</span></span><span style="display:flex;"><span>annotation <span style="color:#f92672">=</span> gateway<span style="color:#f92672">.</span>jvm<span style="color:#f92672">.</span>vn<span style="color:#f92672">.</span>pipeline<span style="color:#f92672">.</span>Annotation(sentence)
+</span></span></code></pre></div><p>After getting the Java class, calling a function is just like a simple python function call.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pipeline<span style="color:#f92672">.</span>annotate(annotation)
+</span></span></code></pre></div><p>And that&rsquo;s all you need to note on how to write the wrapper.</p>
 <p>The full project can be found <a href="https://github.com/motmaytinh/vncorenlp-pywrapper">here</a></p>
 
 </div>
@@ -213,7 +222,7 @@ annotation <span style="color:#f92672">=</span> gateway<span style="color:#f9267
   aria-hidden="true"
 ><path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z" />
 </svg>
-<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/programming/'>programming</a></div>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/programming/'>Programming</a></div>
 <div class='tags'><svg
   class="icon"
   xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +234,7 @@ annotation <span style="color:#f92672">=</span> gateway<span style="color:#f9267
 ><path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z" />
 <line x1="7" y1="7" x2="7" y2="7" />
 </svg>
-<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/python/'>python</a>, <a class='tag' href='/tags/java/'>java</a></div>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/python/'>Python</a>, <a class='tag' href='/tags/java/'>Java</a></div>
 
   </div>
 </footer>
@@ -256,8 +265,8 @@ annotation <span style="color:#f92672">=</span> gateway<span style="color:#f9267
 <section id='comments' class='comments'>
   <div class='container sep-before'>
     <div class='comments-area'><div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+<script>
+    window.disqus_config = function () {
     
     
     
@@ -341,7 +350,7 @@ annotation <span style="color:#f92672">=</span> gateway<span style="color:#f9267
       </li></ul>
   </nav>
 </section><div class='copyright'>
-  <p> &copy; 2019-2025 Ngoc Quy </p>
+  <p> &copy; 2019-2026 Ngoc Quy </p>
 </div>
 
         </div>
@@ -350,7 +359,7 @@ annotation <span style="color:#f92672">=</span> gateway<span style="color:#f9267
     </div>
   </div><script>window.__assets_js_src="/assets/js/"</script>
 
-<script src='/assets/js/main.c3bcf2df.js'></script><script src='/js/custom.js'></script>
+<script src='/assets/js/main.56dcff95.js'></script><script src='/js/custom.js'></script>
 
 </body>
 

@@ -2,69 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Writing on motmaytinh</title>
-    <link>https://motmaytinh.github.io/posts/</link>
+    <link>https://quytran.is-a.dev/posts/</link>
     <description>Recent content in Writing on motmaytinh</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Dec 2023 10:08:00 +0700</lastBuildDate><atom:link href="https://motmaytinh.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Dec 2023 10:08:00 +0700</lastBuildDate>
+    <atom:link href="https://quytran.is-a.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My study on VPN, WireGuard and TUN device</title>
-      <link>https://motmaytinh.github.io/2023/12/my-study-on-vpn-wireguard-and-tun-device/</link>
+      <link>https://quytran.is-a.dev/2023/12/my-study-on-vpn-wireguard-and-tun-device/</link>
       <pubDate>Sun, 31 Dec 2023 10:08:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/2023/12/my-study-on-vpn-wireguard-and-tun-device/</guid>
-      <description>I was reading tutorial to setup a VPN to securely connect to my private server a detail catch my attention - WireGuard uses UDP. Up until that time, I didn&amp;rsquo;t know much of VPN and even more, what does it mean by using UDP, how would application using TCP still work with that VPN.
-So I set sail to study about VPN,&amp;hellip;
-Disclaimer: Please don&amp;rsquo;t take any of these thing as source of truth as I&amp;rsquo;m not expert in computer networking.</description>
+      <guid>https://quytran.is-a.dev/2023/12/my-study-on-vpn-wireguard-and-tun-device/</guid>
+      <description>I was reading tutorial to setup a VPN to securely connect to my private server a detail catch my attention - WireGuard uses UDP. Up until that time, I didn&amp;rsquo;t know much of VPN and even more, what does it mean by using UDP, how would application using TCP still work with that VPN.&#xA;So I set sail to study about VPN,&amp;hellip;&#xA;Disclaimer: Please don&amp;rsquo;t take any of these thing as source of truth as I&amp;rsquo;m not expert in computer networking.</description>
     </item>
-    
     <item>
       <title>Idioms note</title>
-      <link>https://motmaytinh.github.io/2022/09/idioms-note/</link>
+      <link>https://quytran.is-a.dev/2022/09/idioms-note/</link>
       <pubDate>Fri, 02 Sep 2022 19:46:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/2022/09/idioms-note/</guid>
-      <description>TL;DR Từ điển thành ngữ / tục ngữ Anh - Việt
-Tâm sự lan man Mình thích các câu thành ngữ, tục ngữ tiếng Việt vì sự súc tích và hình tượng của chúng. Đó là những bài học đạo đức, về cách cư xử, kinh nghiệm ngắn gọn và cũng thường là &amp;ldquo;đúng&amp;rdquo; (theo ý của mình) đến nỗi mà mình cho rằng một người khi biết nhiều những câu thành ngữ / tục ngữ và làm theo chúng thì sẽ là một người tốt.</description>
+      <guid>https://quytran.is-a.dev/2022/09/idioms-note/</guid>
+      <description>TL;DR Từ điển thành ngữ / tục ngữ Anh - Việt&#xA;Tâm sự lan man Mình thích các câu thành ngữ, tục ngữ tiếng Việt vì sự súc tích và hình tượng của chúng. Đó là những bài học đạo đức, về cách cư xử, kinh nghiệm ngắn gọn và cũng thường là &amp;ldquo;đúng&amp;rdquo; (theo ý của mình) đến nỗi mà mình cho rằng một người khi biết nhiều những câu thành ngữ / tục ngữ và làm theo chúng thì sẽ là một người tốt.</description>
     </item>
-    
     <item>
       <title>Awesome blog posts</title>
-      <link>https://motmaytinh.github.io/2022/05/awesome-blog-posts/</link>
+      <link>https://quytran.is-a.dev/2022/05/awesome-blog-posts/</link>
       <pubDate>Thu, 05 May 2022 10:16:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/2022/05/awesome-blog-posts/</guid>
-      <description>These are blog posts I read over the years. Some of them explain concepts in a way that’s easy to understand. Some discuss common pitfalls/misunderstandings which are helpful for a newbie. There are also some blogs that I like to read. They either have witty or neat content.
-Algorithms &amp;amp; Data Structure  Count min sketch HyperLogLog  Linux  systemd by example  Computer Networking  How NAT traversal works How CDN works Shortest URLs on the Internet HTTP Meme Okay, this is not awesome, it&amp;rsquo;s just a product by me :)) OSI Model Why TCP needs 3 handshakes  Programming  Explaining dynamic programming to a 4 year old SOLID How to design a delayed scheduler in Java?</description>
+      <guid>https://quytran.is-a.dev/2022/05/awesome-blog-posts/</guid>
+      <description>These are blog posts I read over the years. Some of them explain concepts in a way that’s easy to understand. Some discuss common pitfalls/misunderstandings which are helpful for a newbie. There are also some blogs that I like to read. They either have witty or neat content.&#xA;Algorithms &amp;amp; Data Structure Count min sketch HyperLogLog Linux systemd by example Computer Networking How NAT traversal works How CDN works Shortest URLs on the Internet HTTP Meme Okay, this is not awesome, it&amp;rsquo;s just a product by me :)) OSI Model Why TCP needs 3 handshakes Programming Explaining dynamic programming to a 4 year old SOLID How to design a delayed scheduler in Java?</description>
     </item>
-    
     <item>
       <title>Rendezvous Hashing, một thuật toán khác thay thế Consistent Hashing</title>
-      <link>https://motmaytinh.github.io/2021/03/rendezvous-hashing-m%E1%BB%99t-thu%E1%BA%ADt-to%C3%A1n-kh%C3%A1c-thay-th%E1%BA%BF-consistent-hashing/</link>
+      <link>https://quytran.is-a.dev/2021/03/rendezvous-hashing-m%E1%BB%99t-thu%E1%BA%ADt-to%C3%A1n-kh%C3%A1c-thay-th%E1%BA%BF-consistent-hashing/</link>
       <pubDate>Mon, 01 Mar 2021 10:08:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/2021/03/rendezvous-hashing-m%E1%BB%99t-thu%E1%BA%ADt-to%C3%A1n-kh%C3%A1c-thay-th%E1%BA%BF-consistent-hashing/</guid>
+      <guid>https://quytran.is-a.dev/2021/03/rendezvous-hashing-m%E1%BB%99t-thu%E1%BA%ADt-to%C3%A1n-kh%C3%A1c-thay-th%E1%BA%BF-consistent-hashing/</guid>
       <description>Khoan, Consistent Hashing là gì? À, bài viết này nhằm mục đích giới thiệu Rendezvous Hashing (Highest Random Weight Hashing), một thuật toán có thể thay thế cho thuật toán “trứ danh” Consistent Hashing. Nếu bạn chưa từng nghe về Consistent Hashing và bài toán mà nó giải quyết thì có thể tham khảo qua bài viết dễ đọc và dễ hiểu này trước khi đi vào nội dung chính.</description>
     </item>
-    
     <item>
       <title>RSS 101</title>
-      <link>https://motmaytinh.github.io/2020/08/rss-101/</link>
+      <link>https://quytran.is-a.dev/2020/08/rss-101/</link>
       <pubDate>Mon, 03 Aug 2020 10:08:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/2020/08/rss-101/</guid>
+      <guid>https://quytran.is-a.dev/2020/08/rss-101/</guid>
       <description>If you like to collect wisdom from blogs like me, you probably have experienced when: having too many blogs to follow and not knowing when a new post comes out. The primitive manual way to do is regularly loop through the bookmarked blogs to find if there are any updates. Of course, it&amp;rsquo;s not the way we developer comply with, most of you will think of writing a crawler, automating the process and notify when new content had been published.</description>
     </item>
-    
     <item>
       <title>How I wrote a python wrapper for Java implementation of VnCoreNLP</title>
-      <link>https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</link>
+      <link>https://quytran.is-a.dev/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</link>
       <pubDate>Sat, 22 Jun 2019 07:01:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</guid>
-      <description>When working on my thesis, I have to experiment with different tokenize tool. One of those is VnCoreNLP which is reported to have very high accuracy. The thing is it&amp;rsquo;s written in Java while my pipeline is written in Python. So, I decided to write a python wrapper for it. Let&amp;rsquo;s go.
-FYI: If you don&amp;rsquo;t know it yet, the problem of calling other programming language is interoperability. For example, Java can call native functions written in C/C++ using JNI.</description>
+      <guid>https://quytran.is-a.dev/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</guid>
+      <description>When working on my thesis, I have to experiment with different tokenize tool. One of those is VnCoreNLP which is reported to have very high accuracy. The thing is it&amp;rsquo;s written in Java while my pipeline is written in Python. So, I decided to write a python wrapper for it. Let&amp;rsquo;s go.&#xA;FYI: If you don&amp;rsquo;t know it yet, the problem of calling other programming language is interoperability. For example, Java can call native functions written in C/C++ using JNI.</description>
     </item>
-    
   </channel>
 </rss>

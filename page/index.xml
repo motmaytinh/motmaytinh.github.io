@@ -2,36 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on motmaytinh</title>
-    <link>https://motmaytinh.github.io/page/</link>
+    <link>https://quytran.is-a.dev/page/</link>
     <description>Recent content in Pages on motmaytinh</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://motmaytinh.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://quytran.is-a.dev/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Musing</title>
-      <link>https://motmaytinh.github.io/musing/</link>
+      <link>https://quytran.is-a.dev/musing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://motmaytinh.github.io/musing/</guid>
-      <description>🍵 October 22, 2024
-&amp;ldquo;We all start as strangers, but we forget that we rarely choose who ends up a stranger too.&amp;rdquo;
-— Brianna Wiest, How The People We Once Loved Become Strangers Again
-   🍵 April 24, 2023
-&amp;ldquo;Beware of he who would deny you access to information, for in his heart he dreams himself your master&amp;rdquo;
-— Pravin Lal, Sid Meier&amp;rsquo;s Alpha Centauri
-   🍵 June 4, 2021</description>
+      <guid>https://quytran.is-a.dev/musing/</guid>
+      <description>&amp;#x1f375; October 22, 2024&#xA;&amp;ldquo;We all start as strangers, but we forget that we rarely choose who ends up a stranger too.&amp;rdquo;&#xA;— Brianna Wiest, How The People We Once Loved Become Strangers Again&#xA;&amp;#x1f375; April 24, 2023&#xA;&amp;ldquo;Beware of he who would deny you access to information, for in his heart he dreams himself your master&amp;rdquo;&#xA;— Pravin Lal, Sid Meier&amp;rsquo;s Alpha Centauri&#xA;&amp;#x1f375; June 4, 2021&#xA;&amp;ldquo;The Answer to the Great Question&amp;hellip; Of Life, the Universe and Everything&amp;hellip; Is&amp;hellip; Forty-two.</description>
     </item>
-    
     <item>
       <title>About</title>
-      <link>https://motmaytinh.github.io/about/</link>
+      <link>https://quytran.is-a.dev/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://motmaytinh.github.io/about/</guid>
-      <description>Hi, my name is Quý (he/him). I&amp;rsquo;m currently working as a Backend engineer at Zalo Group. I studied Computer Science at the Ho Chi Minh City University of Technology.
-I have a thirst for knowledge and learning new things.
-This is my personal blog, content is primarily focused on, but not limited to programming.
- Personal I love making new friends with people around the world 📬. Feel free to drop me a message if you want to know more about me.</description>
+      <guid>https://quytran.is-a.dev/about/</guid>
+      <description>Hi, my name is Quý (he/him). I&amp;rsquo;m currently working as a Backend engineer at Zalo Group. I studied Computer Science at the Ho Chi Minh City University of Technology.&#xA;I have a thirst for knowledge and learning new things.&#xA;This is my personal blog, content is primarily focused on, but not limited to programming.&#xA;Personal I love making new friends with people around the world &amp;#x1f4ec;. Feel free to drop me a message if you want to know more about me.</description>
     </item>
-    
   </channel>
 </rss>

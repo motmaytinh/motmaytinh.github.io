@@ -1,30 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>programming on motmaytinh</title>
-    <link>https://motmaytinh.github.io/categories/programming/</link>
-    <description>Recent content in programming on motmaytinh</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Programming on motmaytinh</title>
+    <link>https://quytran.is-a.dev/categories/programming/</link>
+    <description>Recent content in Programming on motmaytinh</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Mar 2021 10:08:00 +0700</lastBuildDate><atom:link href="https://motmaytinh.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Dec 2021 10:08:00 +0700</lastBuildDate>
+    <atom:link href="https://quytran.is-a.dev/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rendezvous Hashing, một thuật toán khác thay thế Consistent Hashing</title>
-      <link>https://motmaytinh.github.io/2021/03/rendezvous-hashing-m%E1%BB%99t-thu%E1%BA%ADt-to%C3%A1n-kh%C3%A1c-thay-th%E1%BA%BF-consistent-hashing/</link>
+      <link>https://quytran.is-a.dev/2021/03/rendezvous-hashing-m%E1%BB%99t-thu%E1%BA%ADt-to%C3%A1n-kh%C3%A1c-thay-th%E1%BA%BF-consistent-hashing/</link>
       <pubDate>Mon, 01 Mar 2021 10:08:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/2021/03/rendezvous-hashing-m%E1%BB%99t-thu%E1%BA%ADt-to%C3%A1n-kh%C3%A1c-thay-th%E1%BA%BF-consistent-hashing/</guid>
+      <guid>https://quytran.is-a.dev/2021/03/rendezvous-hashing-m%E1%BB%99t-thu%E1%BA%ADt-to%C3%A1n-kh%C3%A1c-thay-th%E1%BA%BF-consistent-hashing/</guid>
       <description>Khoan, Consistent Hashing là gì? À, bài viết này nhằm mục đích giới thiệu Rendezvous Hashing (Highest Random Weight Hashing), một thuật toán có thể thay thế cho thuật toán “trứ danh” Consistent Hashing. Nếu bạn chưa từng nghe về Consistent Hashing và bài toán mà nó giải quyết thì có thể tham khảo qua bài viết dễ đọc và dễ hiểu này trước khi đi vào nội dung chính.</description>
     </item>
-    
     <item>
       <title>How I wrote a python wrapper for Java implementation of VnCoreNLP</title>
-      <link>https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</link>
+      <link>https://quytran.is-a.dev/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</link>
       <pubDate>Sat, 22 Jun 2019 07:01:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</guid>
-      <description>When working on my thesis, I have to experiment with different tokenize tool. One of those is VnCoreNLP which is reported to have very high accuracy. The thing is it&amp;rsquo;s written in Java while my pipeline is written in Python. So, I decided to write a python wrapper for it. Let&amp;rsquo;s go.
-FYI: If you don&amp;rsquo;t know it yet, the problem of calling other programming language is interoperability. For example, Java can call native functions written in C/C++ using JNI.</description>
+      <guid>https://quytran.is-a.dev/2019/06/how-i-wrote-a-python-wrapper-for-java-implementation-of-vncorenlp/</guid>
+      <description>When working on my thesis, I have to experiment with different tokenize tool. One of those is VnCoreNLP which is reported to have very high accuracy. The thing is it&amp;rsquo;s written in Java while my pipeline is written in Python. So, I decided to write a python wrapper for it. Let&amp;rsquo;s go.&#xA;FYI: If you don&amp;rsquo;t know it yet, the problem of calling other programming language is interoperability. For example, Java can call native functions written in C/C++ using JNI.</description>
     </item>
-    
   </channel>
 </rss>

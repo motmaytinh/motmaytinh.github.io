@@ -2,82 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on motmaytinh</title>
-    <link>https://motmaytinh.github.io/tags/</link>
+    <link>https://quytran.is-a.dev/tags/</link>
     <description>Recent content in Tags on motmaytinh</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Dec 2023 10:08:00 +0700</lastBuildDate><atom:link href="https://motmaytinh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Dec 2023 10:08:00 +0700</lastBuildDate>
+    <atom:link href="https://quytran.is-a.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>computer network</title>
-      <link>https://motmaytinh.github.io/tags/computer-network/</link>
-      <pubDate>Sun, 31 Dec 2023 10:08:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/tags/computer-network/</guid>
+      <title>Computer Network</title>
+      <link>https://quytran.is-a.dev/tags/computer-network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://quytran.is-a.dev/tags/computer-network/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>language</title>
-      <link>https://motmaytinh.github.io/tags/language/</link>
-      <pubDate>Fri, 02 Sep 2022 19:46:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/tags/language/</guid>
+      <title>Language</title>
+      <link>https://quytran.is-a.dev/tags/language/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://quytran.is-a.dev/tags/language/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>docker</title>
-      <link>https://motmaytinh.github.io/tags/docker/</link>
-      <pubDate>Thu, 05 May 2022 10:16:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/tags/docker/</guid>
+      <title>Docker</title>
+      <link>https://quytran.is-a.dev/tags/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://quytran.is-a.dev/tags/docker/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>git</title>
-      <link>https://motmaytinh.github.io/tags/git/</link>
-      <pubDate>Thu, 05 May 2022 10:16:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/tags/git/</guid>
+      <title>Git</title>
+      <link>https://quytran.is-a.dev/tags/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://quytran.is-a.dev/tags/git/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>kafka</title>
-      <link>https://motmaytinh.github.io/tags/kafka/</link>
-      <pubDate>Thu, 05 May 2022 10:16:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/tags/kafka/</guid>
+      <title>Kafka</title>
+      <link>https://quytran.is-a.dev/tags/kafka/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://quytran.is-a.dev/tags/kafka/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>networking</title>
-      <link>https://motmaytinh.github.io/tags/networking/</link>
-      <pubDate>Thu, 05 May 2022 10:16:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/tags/networking/</guid>
+      <title>Networking</title>
+      <link>https://quytran.is-a.dev/tags/networking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://quytran.is-a.dev/tags/networking/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>java</title>
-      <link>https://motmaytinh.github.io/tags/java/</link>
-      <pubDate>Mon, 01 Mar 2021 10:08:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/tags/java/</guid>
+      <title>Java</title>
+      <link>https://quytran.is-a.dev/tags/java/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://quytran.is-a.dev/tags/java/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>python</title>
-      <link>https://motmaytinh.github.io/tags/python/</link>
-      <pubDate>Sat, 22 Jun 2019 07:01:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/tags/python/</guid>
+      <title>Python</title>
+      <link>https://quytran.is-a.dev/tags/python/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://quytran.is-a.dev/tags/python/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

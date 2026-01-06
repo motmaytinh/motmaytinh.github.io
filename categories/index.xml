@@ -2,37 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on motmaytinh</title>
-    <link>https://motmaytinh.github.io/categories/</link>
+    <link>https://quytran.is-a.dev/categories/</link>
     <description>Recent content in Categories on motmaytinh</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 31 Dec 2023 10:08:00 +0700</lastBuildDate><atom:link href="https://motmaytinh.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Dec 2023 10:08:00 +0700</lastBuildDate>
+    <atom:link href="https://quytran.is-a.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>computer network</title>
-      <link>https://motmaytinh.github.io/categories/computer-network/</link>
-      <pubDate>Sun, 31 Dec 2023 10:08:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/categories/computer-network/</guid>
+      <title>Computer Network</title>
+      <link>https://quytran.is-a.dev/categories/computer-network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://quytran.is-a.dev/categories/computer-network/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>blogging</title>
-      <link>https://motmaytinh.github.io/categories/blogging/</link>
-      <pubDate>Fri, 02 Sep 2022 19:46:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/categories/blogging/</guid>
+      <title>Blogging</title>
+      <link>https://quytran.is-a.dev/categories/blogging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://quytran.is-a.dev/categories/blogging/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>programming</title>
-      <link>https://motmaytinh.github.io/categories/programming/</link>
-      <pubDate>Mon, 01 Mar 2021 10:08:00 +0700</pubDate>
-      
-      <guid>https://motmaytinh.github.io/categories/programming/</guid>
+      <title>Programming</title>
+      <link>https://quytran.is-a.dev/categories/programming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://quytran.is-a.dev/categories/programming/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>
